@@ -19,6 +19,7 @@ export class PacienteComponent implements OnInit {
   dataSource:any;
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  
 
   constructor(private service: PacienteService) { }
 
@@ -40,6 +41,7 @@ export class PacienteComponent implements OnInit {
       this.dataSource.paginator = this.paginator;
      })
   }
+
 
 
 

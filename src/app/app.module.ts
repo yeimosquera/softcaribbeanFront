@@ -19,6 +19,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import { RouterModule } from '@angular/router';
 import { RegistrarPersonaComponent } from './components/registrar-persona/registrar-persona.component';
+import { MatTableExporterModule } from 'mat-table-exporter';
+
+
 
 
 
@@ -44,7 +47,8 @@ import { RegistrarPersonaComponent } from './components/registrar-persona/regist
     HttpClientModule,
     MatPaginatorModule,
     MatSortModule,
-    RouterModule
+    RouterModule,
+    MatTableExporterModule
 
   ],
   providers: [],

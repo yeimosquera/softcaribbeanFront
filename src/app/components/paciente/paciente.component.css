@@ -7,3 +7,12 @@ table {
   margin-right: 3%;
   margin-top: 1%;
 }
+
+.descargar{
+  background-color: #3f51b5;
+  color: white;
+}
+
+.descargardiv{
+  text-align: center;
+}
