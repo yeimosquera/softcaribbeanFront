@@ -20,7 +20,8 @@ import {MatSortModule} from '@angular/material/sort';
 import { RouterModule } from '@angular/router';
 import { RegistrarPersonaComponent } from './components/registrar-persona/registrar-persona.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -48,7 +49,10 @@ import { MatTableExporterModule } from 'mat-table-exporter';
     MatPaginatorModule,
     MatSortModule,
     RouterModule,
-    MatTableExporterModule
+    MatTableExporterModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

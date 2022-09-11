@@ -1,1 +1,173 @@
-<p>registrar-persona works!</p>
+<div class="container">
+  <form [formGroup]="formPersona" (ngSubmit)="guardarPersona()">
+    <div class="row">
+      <div class="col-6">
+        <label for="nombre" class="form-label">Nombres</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Yeison Andres" formControlName="nombre">
+        <div class="errors"
+          *ngIf="formPersona.controls['nombre'].invalid && (formPersona.controls['nombre'].dirty || formPersona.controls['nombre'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['nombre'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" placeholder="Hinestroza Mosquera"
+          formControlName="apellidos">
+        <div class="errors"
+          *ngIf="formPersona.controls['apellidos'].invalid && (formPersona.controls['apellidos'].dirty || formPersona.controls['apellidos'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['apellidos'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div><br>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Documento</label>
+        <input type="numn" class="form-control" id="documento" placeholder="123456789" apellidos="documento">
+        <div class="errors"
+          *ngIf="formPersona.controls['documento'].invalid && (formPersona.controls['documento'].dirty || formPersona.controls['documento'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['documento'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Fecha Nacimiento</label>
+        <input type="text" class="form-control" id="nacimiento" placeholder="1995-01-01" formControlName="nacimiento">
+        <div class="errors"
+          *ngIf="formPersona.controls['nacimiento'].invalid && (formPersona.controls['nacimiento'].dirty || formPersona.controls['nacimiento'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['nacimiento'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correo" formControlName="correo" placeholder="name@example.com">
+        <div class="errors"
+          *ngIf="formPersona.controls['correo'].invalid && (formPersona.controls['correo'].dirty || formPersona.controls['correo'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['correo'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+        <input type="text" class="form-control" id="usuario" placeholder="yhm" formControlName="usuario">
+        <div class="errors"
+          *ngIf="formPersona.controls['usuario'].invalid && (formPersona.controls['usuario'].dirty || formPersona.controls['usuario'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['usuario'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Tipo de usuario</label>
+        <select class="form-select" aria-label="Default select example" id="tipoUser" formControlName="tipoUser">
+          <option selected>Seleccione una opción</option>
+          <option value="1">Paciente</option>
+          <option value="2">Empleado</option>
+          <option value="3">Trabajador</option>
+        </select>
+        <div class="errors"
+          *ngIf="formPersona.controls['tipoUser'].invalid && (formPersona.controls['tipoUser'].dirty || formPersona.controls['tipoUser'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['tipoUser'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Género</label>
+        <select class="form-select" aria-label="Default select example" id="genero" formControlName="genero">
+          <option value="" selected>Seleccione una opción</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <div class="errors"
+          *ngIf="formPersona.controls['genero'].invalid && (formPersona.controls['genero'].dirty || formPersona.controls['genero'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['genero'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">EPS</label>
+        <input type="text" class="form-control" id="eps" placeholder="Sura" formControlName="eps">
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">ARL</label>
+        <input type="text" class="form-control" id="arl" placeholder="Sura" formControlName="arl">
+        <div class="errors"
+          *ngIf="formPersona.controls['arl'].invalid && (formPersona.controls['arl'].dirty || formPersona.controls['arl'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['arl'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div><br>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Teléfono móvil</label>
+        <input type="number" class="form-control" id="movil" placeholder="3124567890" formControlName="movil">
+        <div class="errors"
+          *ngIf="formPersona.controls['nombre'].invalid && (formPersona.controls['nombre'].dirty || formPersona.controls['nombre'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['nombre'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Teléfono fijo</label>
+        <input type="text" class="form-control" id="fijo" placeholder="1234566778">
+        <div class="errors"
+          *ngIf="formPersona.controls['nombre'].invalid && (formPersona.controls['nombre'].dirty || formPersona.controls['nombre'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['nombre'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direcion" placeholder="cr 23 # 23" formControlName="direcion">
+        <div class="errors"
+          *ngIf="formPersona.controls['nombre'].invalid && (formPersona.controls['nombre'].dirty || formPersona.controls['nombre'].touched)"
+          class="alert">
+          <div *ngIf="formPersona.controls['nombre'].errors">
+            Este campo es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+
+      </div>
+    </div>
+    <div class="row center">
+      <button type="submit" class="btn btn-primary guardar">Guardar <mat-icon>person_add</mat-icon></button>
+    </div>
+
+  </form>
+</div>

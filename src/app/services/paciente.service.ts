@@ -8,11 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class PacienteService {
 
-  private API_PACIESTES = 'http://localhost:35565/api/Personas/1';
+  private API_PACIESTES = 'http://localhost:35565/api';
 
   constructor( private http:HttpClient ) { }
 
   public getParcientes(): Observable<any>{
-    return this.http.get(this.API_PACIESTES)
+    return this.http.get(this.API_PACIESTES + '/Personas/1')
+  }
+
+  public postPersona(persona:any){
+    return this.http.post(
+       this.API_PACIESTES + '/Personas', {}
+    )
   }
 }
